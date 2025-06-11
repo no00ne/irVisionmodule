@@ -65,7 +65,7 @@ class TrafficDetectionNode:
 
             # 调用斑马线检测
             im0_zebra, suggestion_zebra, _, _ = detect_zebra_frame(
-                im0, self.model, self.device, self.opt.conf_thres, self.opt.iou_thres, self.opt.view_img
+                im0, self.model, self.device
             )
 
             # 调用交通信号灯检测

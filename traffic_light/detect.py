@@ -23,7 +23,7 @@ from traffic_light.utils.datasets import letterbox
 MODEL_CFG     = 'irVisionmodule/traffic_light/cfg/yolov3-spp-6cls.cfg'
 MODEL_WEIGHTS = 'irVisionmodule/traffic_light/best_model_12.pt'
 IMG_SIZE      = (512, 512)
-CONF_THRES    = 0.25
+CONF_THRES    = 0.2
 IOU_THRES     = 0.6
 DEVICE        = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
@@ -31,7 +31,7 @@ MAP_6_TO_3 = {0:'GREEN',1:'RED',2:'RED',3:'GREEN',4:'YELLOW',5:'YELLOW'}
 
 MIN_BOX_H, MAX_BOX_H = 30, 200          # 框高过滤
 IOU_MATCH_THRES = 0.1
-MAX_LOST        = 5                    # 最多允许漏检帧
+MAX_LOST        = 10                    # 最多允许漏检帧
 HOLD            = dict(stop=0.3, slow=0.3)  # 动作维持时间
 
 # ───────── GLOBAL STATE ───────────────────────────────────

@@ -25,10 +25,9 @@ Requests
 scipy
 seaborn
 setuptools
-skimage
+scikit-image
 tensorflow
 tensorflowjs
-tensorrt
 tflite_runtime
 thop
 torch
